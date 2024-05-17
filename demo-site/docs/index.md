@@ -27,7 +27,7 @@ print(d_2)
 
 Or we can subtract one `datetime` from another to create a `timedelta`:
 
-```py
+```{.py env="foo"}
 from datetime import datetime
 d_3 = datetime(2023, 12, 14, 16, 30)
 d_4 = datetime(2024, 5, 13, 11, 15)
