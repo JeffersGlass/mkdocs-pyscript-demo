@@ -9,4 +9,4 @@ This site is [viewable live on GitHub Pages](https://jeffersglass.github.io/mkdo
   * install `mkdocs` and `mkdocs-pyscript`
   * Add `mkdocs-pyscript` to your list of plugins in `mkdocs.yml`
   * Write your documentation - all codeblocks will (by default) be converted to runnable code blocks in the browser.
-  * Publish!
+  * Publish! (`mkdocs gh-deploy`)
