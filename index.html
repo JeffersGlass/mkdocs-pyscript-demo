@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 
-<html lang="en">
-<head><script type="importmap">
-            {
-                "imports": { 
-                    "@pyscript/core": "https://pyscript.net/snapshots/2023.11.1.RC3/core.js"
-                }
-            }
-            </script>
+<html data-bs-theme="light" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -15,37 +9,41 @@
 <link href="img/favicon.ico" rel="shortcut icon"/>
 <title>mkdocs-pyscript demo</title>
 <link href="css/bootstrap.min.css" rel="stylesheet"/>
-<link href="css/font-awesome.min.css" rel="stylesheet"/>
+<link href="css/fontawesome.min.css" rel="stylesheet"/>
+<link href="css/brands.min.css" rel="stylesheet"/>
+<link href="css/solid.min.css" rel="stylesheet"/>
+<link href="css/v4-font-face.min.css" rel="stylesheet"/>
 <link href="css/base.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
 <link href="pyrepl.css" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
-</head>
+<script src="https://pyscript.net/releases/2024.4.2/core.js" type="module"></script><link href="https://pyscript.net/releases/2024.4.2/core.css" rel="stylesheet"/></head>
 <body class="homepage">
 <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
 <div class="container">
 <a class="navbar-brand" href=".">mkdocs-pyscript demo</a>
 <!-- Expanded navigation -->
 <div class="navbar-collapse collapse" id="navbar-collapse">
-<ul class="nav navbar-nav ml-auto">
+<ul class="nav navbar-nav ms-md-auto">
 </ul>
 </div>
 </div>
 </div>
 <div class="container">
 <div class="row">
-<div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
 <div class="navbar-header">
-<button class="navbar-toggler collapsed" data-target="#toc-collapse" data-toggle="collapse" title="Table of Contents" type="button">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
 <span class="fa fa-angle-down"></span>
 </button>
 </div>
-<div class="navbar-collapse collapse card bg-secondary" id="toc-collapse">
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
 <ul class="nav flex-column">
-<li class="nav-item" data-level="1"><a class="nav-link" href="#mkdocs-pyscript-demo-site">mkdocs-pyscript demo site</a>
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#mkdocs-pyscript-demo-site">mkdocs-pyscript demo site</a>
 <ul class="nav flex-column">
-<li class="nav-item" data-level="2"><a class="nav-link" href="#the-datetime-module">The Datetime Module</a>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#the-datetime-module">The Datetime Module</a>
 <ul class="nav flex-column">
 </ul>
 </li>
@@ -60,13 +58,13 @@
 <h2 id="the-datetime-module">The Datetime Module</h2>
 <p>The <code>datetime</code> module can be used to reference specific times, timespans, epochs, and calendar days.
 Let's explore the relationship between the <code>datetime</code> and <code>timedelta</code> classes. If we create a new datetime:</p>
-<pre><div class="py-wrapper" id="py-main-0" style="position:relative"><code class="language-py">from datetime import datetime
+<pre><div class="py-wrapper" style="position:relative;"><code class="language-py">from datetime import datetime
 d_1 = datetime(2023, 12, 1, 14, 30, 00)
 print(d_1)
 </code></div></pre>
 <p><br/></p>
 <p>We can add a <code>timedelta</code> object to it to create another <code>datetime</code> object:</p>
-<pre><div class="py-wrapper" id="py-main-1" style="position:relative"><code class="language-py">from datetime import datetime, timedelta
+<pre><div class="py-wrapper" style="position:relative;"><code class="language-py">from datetime import datetime, timedelta
 d_1 = datetime(2023, 12, 1, 14, 30, 00)
 delta = timedelta(days=90, hours=16, minutes=35)
 d_2 = d_1 + delta
@@ -74,7 +72,7 @@ print(delta)
 print(d_2)
 </code></div></pre>
 <p>Or we can subtract one <code>datetime</code> from another to create a <code>timedelta</code>:</p>
-<pre><div class="py-wrapper" id="py-main-2" style="position:relative"><code class="language-py">from datetime import datetime
+<pre><div class="py-wrapper" style="position:relative;"><code class="language-py" env="foo">from datetime import datetime
 d_3 = datetime(2023, 12, 14, 16, 30)
 d_4 = datetime(2024, 5, 13, 11, 15)
 print(d_3 - d_4)
@@ -85,8 +83,7 @@ print(d_3 - d_4)
 <hr/>
 <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
 </footer>
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 <script>
             var base_url = ".",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
@@ -99,7 +96,7 @@ print(d_3 - d_4)
 <div class="modal-content">
 <div class="modal-header">
 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
 </div>
 <div class="modal-body">
 <table class="table">
@@ -137,6 +134,6 @@ print(d_3 - d_4)
 </body>
 </html>
 <!--
-MkDocs version : 1.5.3
-Build Date UTC : 2023-12-01 22:37:53.348560+00:00
+MkDocs version : 1.6.0
+Build Date UTC : 2024-05-17 19:23:24.489131+00:00
 -->
